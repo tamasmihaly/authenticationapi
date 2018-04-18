@@ -1,14 +1,19 @@
-## Gyakorlat
+# Gyakorlat
    
-  * mappák 
+## Első lépések
+* mappák 
   * controllers
   * config
   * models
   * routes
+* parancsok
   * npm init -> package.json
-  * server.js
   * F1 add gitignore node
   * git init 
+* Fájlok létrehozása
+    * cd . & copy con server.js 
+    * cd config & copy con database.js
+    * cd models & copy con user.js
 
 ## package-s
 
