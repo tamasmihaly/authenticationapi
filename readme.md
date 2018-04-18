@@ -11,9 +11,10 @@
   * F1 add gitignore node
   * git init 
 * Fájlok létrehozása
-    * cd . & copy con server.js 
-    * cd config & copy con database.js
-    * cd models & copy con user.js
+    * cd . & copy con server.js  & cd ..
+    * cd config & copy con database.js & cd ..
+    * cd models & copy con user.js & cd ..
+    * cd routes & copy con user.route.js & cd .. 
 
 ## package-s
 
