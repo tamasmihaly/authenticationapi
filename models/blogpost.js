@@ -9,10 +9,12 @@ const blogpostSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    blogposts: {
+    blogpost: {
         title: String,
         content: String
     }
+}, {
+    timestamps: true
 })
 
 module.exports = mongoose.model('Blogpost', blogpostSchema)
