@@ -1,31 +1,20 @@
-const User = require('../models/blogpost');
+const Blogpost = require('../models/blogpost');
 
 module.exports = {
-    getUser: (req, res) => {
-        res.json({
-            user: req.user
-        })
-    },
-    register: (req, res, next) => {
-        User.register(new User({
-            username: req.body.username,
-            email: req.body.email
-        }), req.body.password, (err) => {
+    getPost: (req, res) => {
+        Blogpost.find({}, (err, post) => {
             if (err) {
-                res.json({
-                    error: err
-                })
+                res.send(err)
             }
-            res.json({
-                success: "sikeres regisztráció"
-            })
+            res.json(post)
         })
     },
-    login: (req, res) => {
-        res.redirect('/');
-    },
-    logout: (req, res) => {
-        req.logout();
-        res.redirect('/');
+    newPost: (req, res) => {
+        Blogpost.create(req.body, (err, post) => {
+            if (err) {
+                res.send(err)
+            }
+            res.json(post)
+        })
     }
 }

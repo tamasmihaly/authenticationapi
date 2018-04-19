@@ -9,6 +9,7 @@ const helmet = require('helmet') //helmet security problémák megoldása
 const fs = require('fs') //filesystem modul
 const https = require('https'); //minden esetben https kell használnunk
 const userRouter = require('./routes/user.route');
+const blogpostRouter = require('./routes/post.route');
 const cors = require('cors');
 const rfs = require('rotating-file-stream');
 const app = express();
@@ -86,6 +87,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use('/', userRouter)
+app.use('/post', blogpostRouter)
+
 
 //start
 

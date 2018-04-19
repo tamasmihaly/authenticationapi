@@ -22,10 +22,14 @@ module.exports = {
         })
     },
     login: (req, res) => {
-        res.redirect('/');
+        res.json({
+            success: "Belépve!"
+        });
     },
     logout: (req, res) => {
         req.logout();
-        res.redirect('/');
+        res.json({
+            success: "Kilépve!"
+        });
     }
 }
